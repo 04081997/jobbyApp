@@ -4,12 +4,13 @@ import {Link} from 'react-router-dom'
 export const NavbarLargeContainer = styled.div`
   display: flex;
   flex-direction: row;
-  justify-content: space-between;
 `
 
 export const MainContainer = styled.div`
   display: flex;
   flex-direction: column;
+  margin-left: 0px;
+  //   width: 60vw;
   background-color: ${props => props.bgColor};
 `
 
@@ -17,12 +18,28 @@ export const ColumnAlign = styled.div`
   display: flex;
   flex-direction: column;
 `
+export const RowAlign = styled.div`
+  display: flex;
+  flex-direction: row;
+`
+
+export const ProfileImage = styled.img`
+  margin: 10px;
+  width: 60px;
+  height: 60px;
+`
+
+export const ViewsAndIcons = styled.div`
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+`
+
 export const InputContainer = styled.div`
   display: flex;
   flex-direction: row;
   //   align-self: center;
   margin-left: 10vh;
-  margin-top: 30px;
 `
 export const Input = styled.input`
   padding: 12px;
@@ -30,20 +47,12 @@ export const Input = styled.input`
   border: 1px solid grey;
   outline: none;
   height: 12px;
-  background-color: transparent;
 `
 export const Button = styled.button`
-  height: 26px;
-  cursor: pointer;
-`
-
-export const CloseButton = styled.button`
-  background-color: transparent;
   border: none;
-  margin-left: 10px;
-  outline: none;
+  margin-right: 10px;
+  background-color: transparent;
   cursor: pointer;
-  border-radius: 10px;
 `
 export const Retry = styled.button`
   padding: 15px;
@@ -65,20 +74,21 @@ export const NotFoundContainer = styled.div`
 `
 
 export const Image = styled.img`
-  width: 300px;
-  margin: 20px;
+  width: 250px;
+  margin: 10px;
 `
 
 export const Heading = styled.h1`
   color: black;
-  text-align: center;
   font-size: 30px;
+  color: ${props => props.textColor};
 `
 
 export const Desc = styled.p`
   color: black;
-  text-align: center;
   font-size: 20px;
+  margin-left: 15px;
+  color: ${props => props.textColor};
 `
 export const NavLinksList = styled.ul`
   display: flex;
@@ -86,25 +96,18 @@ export const NavLinksList = styled.ul`
   padding-inline-start: 0;
   flex-wrap: wrap;
   list-style-type: none;
-  margin-left: 15px;
-  width: 80vw;
 `
 
 export const NavLink = styled(Link)`
-  display: flex;
-  justify-content: center;
-  align-items: center;
   color: #1e293b;
   text-decoration: none;
-  margin-bottom: 32px;
+  margin-bottom: 10px;
 `
-export const AlignRow = styled.div`
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-`
-
-export const ModalContainer = styled.div`
-  display: flex;
-  flex-direction: column;
+export const VideoSize = styled.img`
+  height: 40vh;
+  width: 70vw;
+  @media screen and (max-width: 800px) {
+    width: 100vw;
+    height: 30vh;
+  }
 `
